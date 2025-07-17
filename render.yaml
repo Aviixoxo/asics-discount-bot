@@ -1,6 +1,12 @@
 services:
-  - type: worker
+  - type: web
     name: asics-alert-bot
-    env: python
+    runtime: python
+    pythonVersion: 3.11.9
+    buildCommand: ""
     startCommand: python bot.py
-    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        sync: true
+      - key: CHAT_ID
+        sync: true
