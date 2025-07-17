@@ -1,0 +1,6 @@
+services:
+  - type: worker
+    name: asics-alert-bot
+    env: python
+    startCommand: python bot.py
+    autoDeploy: true
